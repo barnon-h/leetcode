@@ -6,8 +6,8 @@ class Solution:
         
         ret = ""
         
-        final_len = max([ w1_l, w2_l ])
-        
+        final_len = w1_l if w1_l > w2_l else w2_l 
+
         for i in range( final_len ):
             if i < w1_l: ret += word1[ i ]
             if i < w2_l: ret += word2[ i ]
