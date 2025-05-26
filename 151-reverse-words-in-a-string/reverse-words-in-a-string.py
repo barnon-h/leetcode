@@ -9,7 +9,7 @@ class Solution:
             if i != " ":
                 word += i
             else:
-                if word.strip()!= "":
+                if word != "":
                     pq.append(word)
                 word = ""
         pq.append(word)
