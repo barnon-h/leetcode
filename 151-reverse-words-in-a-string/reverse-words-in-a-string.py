@@ -15,7 +15,7 @@ class Solution:
         pq.append(word)
 
         ret = ""
-        for _ in range(len(pq)-1):
+        for _ in range(len( pq ) - 1 ):
             ret += pq.pop() + " "
         ret += pq.pop()
 
