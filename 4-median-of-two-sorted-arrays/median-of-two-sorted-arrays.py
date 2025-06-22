@@ -16,31 +16,36 @@ class Solution:
             p2 = n2.popleft() if len( n2 ) > 0 else None
 
             if p1 is None:
+                
                 if p2 is None:
                     break
-                elif p2 is not None:
+                else:
                     final_arr.append( p2 )
                     if len( n2 ) > 0 : 
                         for j in n2 : final_arr.append( j )
                     break
+            
             elif p2 is None:
                 if p1 is None:
                     break
-                elif p1 is not None:
+                else:
                     final_arr.append( p1 )
                     if len( n1 ) > 0 : 
                         for j in n1 : final_arr.append( j )
                     break
+            
             else:
                 if p1 < p2:
                     final_arr.append( p1 )
                     n2.appendleft( p2 )
+                
                 elif p2 < p1:
                     final_arr.append( p2 )
                     n1.appendleft( p1 )
-                elif p1 == p2:
-                    final_arr.append(p1)
-                    final_arr.append(p2)
+                
+                else:
+                    final_arr.append( p1 )
+                    final_arr.append( p2 )
 
 
         median = -1
