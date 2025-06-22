@@ -21,8 +21,7 @@ class Solution:
                     break
                 else:
                     final_arr.append( p2 )
-                    if len( n2 ) > 0 : 
-                        for j in n2 : final_arr.append( j )
+                    if len( n2 ) > 0 : final_arr.extend( n2 )
                     break
             
             elif p2 is None:
@@ -30,8 +29,7 @@ class Solution:
                     break
                 else:
                     final_arr.append( p1 )
-                    if len( n1 ) > 0 : 
-                        final_arr.extend(n1)
+                    if len( n1 ) > 0 : final_arr.extend( n1 )
                     break
             
             else:
