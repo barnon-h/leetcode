@@ -15,7 +15,6 @@ class Solution:
             p1 = n1.popleft() if len( n1 ) > 0 else None
             p2 = n2.popleft() if len( n2 ) > 0 else None
 
-            print(f"comparing {p1} and {p2}")
             if p1 is None:
                 if p2 is None:
                     break
@@ -44,7 +43,6 @@ class Solution:
                     final_arr.append(p2)
 
 
-        print(f"{final_arr}")
         median = -1
         if len(final_arr) == 1:
             median = final_arr[0]
