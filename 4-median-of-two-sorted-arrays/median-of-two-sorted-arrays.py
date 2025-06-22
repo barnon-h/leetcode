@@ -18,20 +18,17 @@ class Solution:
 
             if p1 is None:
                 
-                if p2 is None:
-                    break
-                else:
+                if p2 is not None:
                     final_arr.append( p2 )
                     if len( n2 ) > 0 : final_arr.extend( n2 )
-                    break
+                break
             
             elif p2 is None:
-                if p1 is None:
-                    break
-                else:
+                
+                if p1 is not None:
                     final_arr.append( p1 )
                     if len( n1 ) > 0 : final_arr.extend( n1 )
-                    break
+                break
             
             else:
                 if p1 < p2:
