@@ -7,6 +7,7 @@ class Solution:
                             ) -> float:
         total_len = len( nums1 ) + len( nums2 )
 
+        median = -1
         final_arr = deque([])
         n1 = deque( nums1 )
         n2 = deque( nums2 )
@@ -45,15 +46,16 @@ class Solution:
                     final_arr.append( p1 )
                     final_arr.append( p2 )
 
-
-        median = -1
-        if len(final_arr) == 1:
-            median = final_arr[0]
+        if len( final_arr ) == 1:
+            median = final_arr[ 0 ]
+        
         elif total_len%2 == 1:
-            median = final_arr[ floor(total_len/2) ]
+            median = final_arr[ floor( total_len / 2 )]
+        
         else:
-            mid = floor(total_len/2)
-            median = (final_arr[mid] + final_arr[mid-1]) / 2
+            mid = floor( total_len / 2 )
+            median = ( final_arr[ mid ] + final_arr[ mid - 1 ]) / 2
+        
         return median
 
 
