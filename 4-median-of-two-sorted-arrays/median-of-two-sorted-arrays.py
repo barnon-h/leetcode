@@ -43,8 +43,7 @@ class Solution:
                     n1.appendleft( p1 )
                 
                 else:
-                    final_arr.append( p1 )
-                    final_arr.append( p2 )
+                    final_arr.extend([ p1 , p2 ])
 
         if len( final_arr ) == 1:
             median = final_arr[ 0 ]
