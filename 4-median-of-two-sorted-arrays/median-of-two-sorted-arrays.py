@@ -31,7 +31,7 @@ class Solution:
                 else:
                     final_arr.append( p1 )
                     if len( n1 ) > 0 : 
-                        for j in n1 : final_arr.append( j )
+                        final_arr.extend(n1)
                     break
             
             else:
