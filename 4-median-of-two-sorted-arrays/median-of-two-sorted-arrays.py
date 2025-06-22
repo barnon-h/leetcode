@@ -16,18 +16,16 @@ class Solution:
             p1 = n1.popleft() if len( n1 ) > 0 else None
             p2 = n2.popleft() if len( n2 ) > 0 else None
 
-            if p1 is None:
+            if p1 is None or p2 is None:
                 
                 if p2 is not None:
                     final_arr.append( p2 )
                     if len( n2 ) > 0 : final_arr.extend( n2 )
-                break
-            
-            elif p2 is None:
                 
-                if p1 is not None:
+                elif p1 is not None:
                     final_arr.append( p1 )
                     if len( n1 ) > 0 : final_arr.extend( n1 )
+                
                 break
             
             else:
