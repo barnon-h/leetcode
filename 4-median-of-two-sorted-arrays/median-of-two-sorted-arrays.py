@@ -8,7 +8,7 @@ class Solution:
         total_len = len( nums1 ) + len( nums2 )
 
         median = -1
-        final_arr = deque([])
+        final_arr = []
         n1 = deque( nums1 )
         n2 = deque( nums2 )
 
