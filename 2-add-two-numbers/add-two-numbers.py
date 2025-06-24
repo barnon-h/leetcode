@@ -23,8 +23,8 @@ class Solution:
         l = ListNode( int( char_array[ 0 ]), None )
         
         curr = l
-        for i in range(1, len(char_array)):
-            curr.next = ListNode(int(char_array[i]), None)
+        for i in range(1, len( char_array )):
+            curr.next = ListNode( int( char_array[ i ]), None )
             curr = curr.next
     
         return l
