@@ -5,7 +5,9 @@
 #         self.next = next
 class Solution:
 
-    def sum_link(self, l: Optional[ListNode]):
+    def sum_link( self, 
+                  l: Optional[ListNode]
+                ) -> float:
         curr = l
         val = 0
         multiplier = 1
@@ -16,14 +18,17 @@ class Solution:
             if curr is None: break
         return val
 
-    def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
-        char_array = [*f"{ self.sum_link(l1) + self.sum_link(l2) }"]
+    def addTwoNumbers( self, 
+                        l1: Optional[ListNode], 
+                        l2: Optional[ListNode]
+                    ) -> Optional[ListNode]:
+        char_array = [ *f"{ self.sum_link(l1) + self.sum_link(l2) }" ]
         char_array.reverse()
         
         l = ListNode( int( char_array[ 0 ]), None )
         
         curr = l
-        for i in range(1, len( char_array )):
+        for i in range( 1, len( char_array )):
             curr.next = ListNode( int( char_array[ i ]), None )
             curr = curr.next
     
