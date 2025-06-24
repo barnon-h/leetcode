@@ -25,8 +25,6 @@ class Solution:
         for i in range(1, len(char_array)):
             curr.next = ListNode(int(char_array[i]), None)
             curr = curr.next
-        print(l)
-        print(l1)
     
         return l
 
