@@ -19,11 +19,11 @@ class Solution:
         return val
 
     def addTwoNumbers( self, 
-                        l1: Optional[ListNode], 
-                        l2: Optional[ListNode]
-                    ) -> Optional[ListNode]:
-        char_array = [ *f"{ self.sum_link(l1) + self.sum_link(l2) }" ]
+                        l1: Optional[ ListNode ], 
+                        l2: Optional[ ListNode ]
+                    ) -> Optional[ ListNode ]:
         
+        char_array = [ *f"{ self.sum_link( l1 ) + self.sum_link( l2 ) }" ]
         l = ListNode( int( char_array[ len(char_array) -1 ]), None )
         
         curr = l
