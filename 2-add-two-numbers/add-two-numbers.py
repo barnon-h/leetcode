@@ -23,12 +23,11 @@ class Solution:
                         l2: Optional[ListNode]
                     ) -> Optional[ListNode]:
         char_array = [ *f"{ self.sum_link(l1) + self.sum_link(l2) }" ]
-        char_array.reverse()
         
-        l = ListNode( int( char_array[ 0 ]), None )
+        l = ListNode( int( char_array[ len(char_array) -1 ]), None )
         
         curr = l
-        for i in range( 1, len( char_array )):
+        for i in range( len( char_array ) -2, -1, -1):
             curr.next = ListNode( int( char_array[ i ]), None )
             curr = curr.next
     
