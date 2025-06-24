@@ -17,11 +17,11 @@ class Solution:
         return val
 
     def addTwoNumbers(self, l1: Optional[ListNode], l2: Optional[ListNode]) -> Optional[ListNode]:
-        solution = self.sum_link(l1) + self.sum_link(l2)
-        char_array = [*f"{solution}"]
+        char_array = [*f"{ self.sum_link(l1) + self.sum_link(l2) }"]
         char_array.reverse()
-        l = ListNode(int(char_array[0]), None)
-        curr = l
+        
+        curr = ListNode( int( char_array[ 0 ]), None )
+        l = curr
         for i in range(1, len(char_array)):
             curr.next = ListNode(int(char_array[i]), None)
             curr = curr.next
