@@ -20,8 +20,7 @@ class Solution:
 
     def count_good_nodes( self, prnt_val : int, n : TreeNode ) -> int:
         if self.is_leaf( n ):
-            x = self.get_score(prnt_val, n)
-            return x
+            return self.get_score(prnt_val, n)
         
         else:
             score = self.get_score( prnt_val, n )
