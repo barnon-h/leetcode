@@ -16,7 +16,7 @@ class Solution:
         return n.right is None and n.left is None
 
     def get_score( self, prnt_val : int, n : TreeNode ) -> int:
-        return 1 if self.is_good_node( prnt_val, n ) else 0
+        return 1 if n.val >= prnt_val else 0
 
     def count_good_nodes( self, prnt_val : int, n : TreeNode ) -> int:
         if self.is_leaf( n ):
