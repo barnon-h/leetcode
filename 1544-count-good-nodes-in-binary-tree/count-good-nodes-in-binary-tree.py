@@ -30,10 +30,10 @@ class Solution:
                 return score + self.count_good_nodes( max_val, n.left ) + self.count_good_nodes( max_val, n.right )
             
             elif n.left is None:
-                return score + self.count_good_nodes(max_val, n.right)
+                return score + self.count_good_nodes( max_val, n.right )
             
             elif n.right is None:
-                return score + self.count_good_nodes(max_val, n.left)
+                return score + self.count_good_nodes( max_val, n.left )
 
 
     def goodNodes( self, root: TreeNode ) -> int:
