@@ -16,18 +16,15 @@ class Solution:
         return n.right is None and n.left is None
 
     def get_score( self, prnt_val : int, n : TreeNode ) -> int:
-        print(f"# Evaluating node {n.val}, with max node {prnt_val}")
         return 1 if self.is_good_node( prnt_val, n ) else 0
 
     def count_good_nodes( self, prnt_val : int, n : TreeNode ) -> int:
         if self.is_leaf( n ):
             x = self.get_score(prnt_val, n)
-            print(f"adding {x}")
             return x
         
         else:
             score = self.get_score( prnt_val, n )
-            print(f"adding {score}")
             max_val = max([ prnt_val, n.val ])
             
             if n.left and n.right:
