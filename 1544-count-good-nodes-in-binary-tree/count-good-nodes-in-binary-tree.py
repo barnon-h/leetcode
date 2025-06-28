@@ -24,7 +24,7 @@ class Solution:
         
         else:
             score = self.get_score( prnt_val, n )
-            max_val = max([ prnt_val, n.val ])
+            max_val = n.val if n.val > prnt_val else prnt_val
             
             if n.left and n.right:
                 return score + self.count_good_nodes( max_val, n.left ) + self.count_good_nodes( max_val, n.right )
