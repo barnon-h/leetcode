@@ -37,4 +37,4 @@ class Solution:
 
 
     def goodNodes( self, root: TreeNode ) -> int:
-        return self.count_good_nodes( -math.inf, n = root )
+        return self.count_good_nodes( -10e6, n = root )
