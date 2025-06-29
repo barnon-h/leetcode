@@ -16,8 +16,7 @@ class Solution:
             else:
                 if ups[ p2 ] not in vowels: p2 -= 1
                 if ups[ p1 ] not in vowels: p1 += 1
-        ret = ""
-        for i in chars: ret += i
+        ret = "".join( chars )
         return ret
             
         
