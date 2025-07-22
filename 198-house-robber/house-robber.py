@@ -12,10 +12,6 @@ class Solution:
 
         elif len( nums ) - idx == 1:
             return nums[ idx ]
-        
-        
-        #lif len( nums ) - idx == 2:
-        #    return max([ nums[ idx ], nums[ idx + 1 ]])
 
         else:
             if idx not in self.d:
