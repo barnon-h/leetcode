@@ -18,7 +18,7 @@ class Solution:
         else:
             ret = False 
             
-            for i in range( 1, n[ idx ] + 1 ):
+            for i in range( n[ idx ] , 0, -1 ):
                 if idx + i not in self.d:
                     self.d[ idx+i ] = self.helper( n, idx + i )
                 
